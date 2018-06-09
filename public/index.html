@@ -6,16 +6,6 @@
     <body>
         <p>Welcome to the chat app</p>
         <script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-        <script lang="javascript">
-            var socket = io();
-
-            socket.on('connect', () => {
-                console.log('Connected to server');
-            });
-
-            socket.on('disconnect', () => {
-                console.log('Disconnected from server');
-            });
-        </script>
+        <script lang="javascript" src="/js/index.js"></script>
     </body>
 </html>
