@@ -24,18 +24,18 @@ io.on('connection', (socket) => {
 
     socket.on('createMessage', (message,callback) => {
         console.log('createMessage',message);
-        callback('Server acknowledge.');
         socket.broadcast.emit('newMessage',{
             from: message.from,
             text: message.text,
             createdAt: new Date()
         });
+        callback();
     });
 
-    socket.on('createLocationMessage', (coords) => {
+    socket.on('createLocationMessage', (coords, callback) => {
         console.log(coords);
         io.emit('newLocationMessage', generateLocationMessage('User',coords.latitude, coords.longitude));
-
+        callback();
     });
 
     socket.on('disconnect', (socket) => {
