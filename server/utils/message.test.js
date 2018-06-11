@@ -13,7 +13,7 @@ describe('Utils', () => {
             expect(res.from).toBe(data.from);
             expect(res.text).toBe(data.text);
             expect(typeof res.createdAt).toBe('object');
-            expect(res.createdAt.constructor.name).toBe('Date');
+            expect(res.createdAt.constructor.name).toBe('Moment');
         });
     });
 
@@ -29,7 +29,7 @@ describe('Utils', () => {
             expect(res.from).toBe(data.from);
             expect(res.url).toBe(`https://www.google.com/maps?q=${data.latitude},${data.longitude}`);
             expect(typeof res.createdAt).toBe('object');
-            expect(res.createdAt.constructor.name).toBe('Date');
+            expect(res.createdAt.constructor.name).toBe('Moment');
         });
     });    
 });
