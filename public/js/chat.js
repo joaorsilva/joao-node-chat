@@ -100,6 +100,6 @@ jQuery('#send-location').on('click', function(e) {
         });
     }, function() {
         locationButton.text('Send Location').removeAttr('disabled');
-        alter('Unable to fetch location');
+        alert('Unable to fetch location');
     });
 });
