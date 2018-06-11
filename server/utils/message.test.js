@@ -1,7 +1,7 @@
 var expect = require('expect');
 var {generateMessage, generateLocationMessage} = require('./message');
 
-describe('Utils', () => {
+describe('Message', () => {
     describe('generateMessage', () => {
 
         it('should generate the correct message object', () => {
